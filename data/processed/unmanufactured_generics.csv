@@ -1,0 +1,51 @@
+generic_id,generic_name,drug_class,indication
+80,Artemether,Anti-malarial drugs,Schistosomiasis
+1276,Benzyl Alcohol,Other scalp preparations,Pediculosis capitis
+1254,Benzocaine + Camphor + Methanol + Phenol,Topical Local Anesthetics,Toothache
+1242,Betamethasone + Gentamicin,Other Topical corticosteroids,Psoriasis
+1397,Butoconazole Nitrate,Drugs used in Vaginal and Vulval condition,Vulvovaginal candidiasis
+219,Cefpirome Sulphate,Fourth generation Cephalosporins,Susceptible infections
+1274,Cefoxitin,Second generation Cephalosporins,Urinary tract infection
+260,Cinchocaine Hydrochloride,Local & Surface anesthesia,Surface anaesthesia
+258,Cinacalcet,Calcium Regulator,Secondary hyperparathyroidism
+395,Doxylamine Succinate,Sedating Anti-histamine,Watery eye
+412,Entacapone,Antiparkinson drugs,Parkinson’s disease
+502,Formoterol Fumarate,Long-acting selective β-adrenoceptor stimulants,Emphysema
+1414,Gadoversetamide,Contrast medium for diagnostic procedures,"Intravenous use in MRI to visualize lesions with abnormal vascularity in the brain, spine and associated tissues"
+1210,Inactivated Polio Vaccine,"Vaccines, Anti-sera & Immunoglobulin",Active immunisation against Poliomyelitis
+1417,Iodixanol,Contrast medium for diagnostic procedures,Peripheral venography
+634,Isoniazid,Anti-Tubercular Chemotherapeutics,Tuberculosis
+1418,Lacosamide,Atypical anti-depressant drugs,Seizures
+676,Levobupivacaine Hydrochloride,Regional anesthesia,Surgical anaesthesia
+1263,Menthol + Pramoxine Hydrochloride,Topical Analgesics,Skin irritations
+1393,Methocarbamol,Centrally acting Skeletal Muscle Relaxants,Musculoskeletal pain
+1413,Moxonidine,Anti-hypertensive,Lower the blood pressure
+792,Naltrexone,Antidote preparations,Opioid dependence
+1267,Naloxone Hydrochloride,Antidote preparations,Opioid dependence
+1228,Nevirapine,Drugs for HIV / Anti-retroviral drugs,HIV infection
+1243,Neomycin Sulfate + Bacitracin Zinc + Polymyxin B Sulfate (Ophthalmic),Aural Anti-bacterial preparations,Bacterial ear infections
+1332,Nystatin (Topical),Drugs for subcutaneous and mycoses,Cutaneous or mucocutaneous mycotic infections
+1271,Nizatidine,H2 receptor antagonist,Yellow fever infection
+848,Oxyphencyclimine Hydrochloride,Anticholinergics (antimuscarinics)/ Anti-spasmodics,Spasm
+845,Oxybutynin Chloride,Anticholinergics (antimuscarinics)/ Anti-spasmodics,Urinary frequency and urgency
+1235,Podophyllotoxin,Anti neoplastic preparations,Warts
+1268,Pholcodine,Cough suppressant,Nonproductive coughs
+937,Pyrimethamine,Anti-malarial drugs,Toxoplasmosis
+934,Pyrazinamide,Anti-Tubercular Chemotherapeutics,Tuberculosis
+1269,Protamine Sulfate,Antidote preparations,Heparin overdosage
+1270,Rimexolone,Ophthalmic Steroid preparations,Ocular inflammation
+1272,Roxatidine,H2 receptor antagonist,Zollinger-Ellison syndrome
+1422,Selegiline Hydrochloride,Antiparkinson drugs,Parkinson’s disease
+1394,Saquinavir Mesylate,Anti-viral drugs,HIV infection
+1283,Salsalate,Drugs for Osteoarthritis,Rheumatoid arthritis
+999,Sodium Dichloroisocyanurate,Water purifying agent,Water purification
+1281,Sodium Stibogluconate,Leishmaniacides,Visceral leishmaniasis
+1278,Sodium Nitroprusside Dihydrate,Vasodilator antihypertensive drugs,Severe hypertension
+1021,Sulfinpyrazone,Drugs used in Gout,Hyperuricaemia
+1018,Strontium Ranelate,Inhibiting bone resorption,Post-menopausal osteoporosis
+1017,Streptomycin,Aminoglycosides,Tuberculosis
+1054,Terfenadine,Non-sedating antihistamines,Allergic conditions
+1256,Terconazole,Drugs used in Vaginal and Vulval condition,Vulvovaginal candidiasis
+1065,Thioridazine,Phenothiazine drugs,Schizophrenia
+1265,Trimipramine,Tricyclic & related anti-depressant drugs,Depression
+1229,Zidovudine,Drugs for HIV / Anti-retroviral drugs,HIV infection
