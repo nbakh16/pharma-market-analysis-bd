@@ -17,6 +17,7 @@ This project investigates three core strategic questions:
 * **Dosage Form Complexity:** Dosage form, Top 10 giants dominate at Inhalation Capsules (71.6% share), Extended-Release Tablets (53.4%) and IM/IV Injections (45.9%), where small companies hold less than 11% share. Conversely, small companies crowd into lower-barrier liquids (Syrups 34.7%, Oral Suspensions 38.6%) and Delayed/Timed-Release Capsules (40.5%–55.6%).
 * **Low-Barrier Crowding:** Small/Niche manufacturers (Rank 51–232) are largely locked out of complex injectables and inhalers. They cluster heavily in standard oral solids and pre-formulated pellets such as Timed-Release Capsules (**55.6%**), Delayed-Release Capsules (**40.5%**) and Oral Suspensions (**38.6%**).
 
+![Dosage Form Barriers by Manufacturer Tier](reports/figures/01_dosage_form_barriers_by_tier.png)
 
 ---
 
@@ -31,6 +32,7 @@ This project investigates three core strategic questions:
 | **2. Mid-Tier (Rank 11–50)** | 22.3% | **53.8%** | 24.0% |
 | **3. Small/Niche (Rank 51–232)** | 20.1% | 43.7% | **36.3%** |
 
+![Brand Pricing Stance by Tier](reports/figures/02_product_price_position_by_tier.png)
 
 ---
 
@@ -47,6 +49,7 @@ This project investigates three core strategic questions:
 | **3. Moderate (3–10 Mfgs)** | 613 | 36.91% | 4,490 | 20.68% | **৳ 45.00** |
 | **4. Crowded (11+ Mfgs)** | 307 | 18.48% | 16,069 | 74.01% | **৳ 15.00** |
 
+![Competition Intensity and Saturation](reports/figures/03_competition_and_saturation.png)
 
 ---
 
@@ -92,6 +95,27 @@ This project investigates three core strategic questions:
 │       └── unmanufactured_generics.csv   # 50 registered generics with 0 manufactured brands
 ├── notebooks/
 │   ├── 01_data_cleaning_and_schema.ipynb     # Data cleaning, price parsing and validation
-│   ├── 02_exploratory_market_analysis.ipynb  # Core statistical analysis across Questions 1-3
+│   ├── 02_exploratory_market_analysis.ipynb  # Core statistical analysis
+│   └── 03_market_visualizations.ipynb        # Executive Charts
+├── reports/
+│   └── figures/                          #  Charts in PNG format
 └── README.md
 ```
+
+---
+
+## Tech Stack
+* **Programming Language:** Python
+* **Data Manipulation & Analysis:** `pandas`, `numpy`
+* **Data Visualization:** `matplotlib`
+* **Development Environment:** Jupyter Notebook / JupyterLab (or VS Code with Jupyter Extension)
+
+---
+
+## How to Use & Reproduce the Analysis
+
+1. **Clone the Repository**
+   ```bash
+   git clone [https://github.com/nbakh16/pharma-market-analysis-bd.git](https://github.com/nbakh16/pharma-market-analysis-bd.git)
+   cd pharma-market-analysis-bd
+   ```
