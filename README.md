@@ -4,6 +4,7 @@ Just 50 of **232 manufacturers** hold **74.2%** of Bangladesh's **21,712 registe
 
 [![Full Case Study](https://img.shields.io/badge/Read_the_Full_Case_Study-FF5D01?style=for-the-badge)](https://akhunjee.dev/projects/pharma-market-analysis-bd)
 [![Kaggle Notebook](https://img.shields.io/badge/Kaggle-Notebook-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/code/nbakh16/bangladesh-pharma-market-eda-pricing-strategy/)
+[![Power BI Dashboard](https://img.shields.io/badge/Power_BI-Dashboard_(PDF)-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](dashboard/pharma-market-dashboard.pdf)
 
 ![Median price by molecule competition tier](reports/figures/03_competition_and_saturation.png)
 
@@ -19,6 +20,7 @@ Just 50 of **232 manufacturers** hold **74.2%** of Bangladesh's **21,712 registe
 ## Repository Structure
 
 ```text
+├── dashboard/                                # Power BI dashboard (.pbix, .pbip) and static PDF 
 ├── data/
 │   ├── raw/                                  # Original datasets
 │   └── processed/
@@ -30,7 +32,8 @@ Just 50 of **232 manufacturers** hold **74.2%** of Bangladesh's **21,712 registe
 │   ├── 02_exploratory_market_analysis.ipynb  # Core statistical analysis
 │   └── 03_market_visualizations.ipynb        # Executive Charts
 ├── reports/
-│   └── figures/                              #  Charts in PNG format
+│   └── figures/                              # Charts in PNG format
+├── requirements.txt                          # Python dependencies
 └── README.md
 ```
 
@@ -47,7 +50,7 @@ Run the notebooks in order (01 → 02 → 03).
 
 ## Tools
 
-Python (Pandas, NumPy, Matplotlib), Jupyter Notebook / JupyterLab
+Python (Pandas, NumPy, Matplotlib), Jupyter Notebook / JupyterLab, Power BI
 
 
 ## Data Source
