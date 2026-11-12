@@ -3,7 +3,7 @@
   "version": "4.0",
   "datasetReference": {
     "byPath": {
-      "path": "../pharma-market-analysis.SemanticModel"
+      "path": "../pharma-market-dashboard.SemanticModel"
     }
   }
 }

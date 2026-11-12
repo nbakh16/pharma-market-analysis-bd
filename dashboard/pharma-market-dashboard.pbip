@@ -4,7 +4,7 @@
   "artifacts": [
     {
       "report": {
-        "path": "pharma-market-analysis.Report"
+        "path": "pharma-market-dashboard.Report"
       }
     }
   ],

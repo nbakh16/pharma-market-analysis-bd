@@ -325,6 +325,25 @@
             }
           ]
         }
+      },
+      {
+        "name": "6eda43806294b939b7cb",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "master_medicines_enriched"
+                  }
+                },
+                "Property": "price_bdt"
+              }
+            },
+            "Function": 6
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

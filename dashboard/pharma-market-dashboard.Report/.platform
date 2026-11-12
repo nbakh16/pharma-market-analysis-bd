@@ -2,10 +2,10 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
   "metadata": {
     "type": "Report",
-    "displayName": "pharma-market-analysis"
+    "displayName": "pharma-market-dashboard"
   },
   "config": {
     "version": "2.0",
-    "logicalId": "811a05ff-617b-4181-bfe2-fd551f474a06"
+    "logicalId": "6772b3d4-ba74-4bb2-b39c-d716c61789d0"
   }
 }
