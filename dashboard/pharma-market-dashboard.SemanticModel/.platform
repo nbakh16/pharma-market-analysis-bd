@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "pharma-market-analysis"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7077cbf7-c392-4191-b8ac-7c27f99bcdfb"
+  }
+}

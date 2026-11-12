@@ -1,0 +1,156 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "f232fef54c595ce20a66",
+  "position": {
+    "x": 12.222222222222221,
+    "y": 57.777777777777779,
+    "z": 8004,
+    "height": 662.22222222222217,
+    "width": 1255.5555555555554,
+    "tabOrder": 8004
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DAX_Catalog"
+                    }
+                  },
+                  "Property": "Measure Name"
+                }
+              },
+              "queryRef": "DAX_Catalog.Measure Name",
+              "nativeQueryRef": "Measure Name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DAX_Catalog"
+                    }
+                  },
+                  "Property": "DAX Formula"
+                }
+              },
+              "queryRef": "DAX_Catalog.DAX Formula",
+              "nativeQueryRef": "DAX Formula"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Courier New'''"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "105.77777681042042D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DAX_Catalog.Measure Name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "1114.3333354986935D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "DAX_Catalog.DAX Formula"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'AlternatingRowsNew'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f01ff7f344b7ab317619",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DAX_Catalog"
+              }
+            },
+            "Property": "Measure Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7d1990378049ec3b53b1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DAX_Catalog"
+              }
+            },
+            "Property": "DAX Formula"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+table DAX_Catalog
+	lineageTag: f42ead5a-41c6-4fae-a60c-6ecb17c6feb3
+
+	column 'Measure Name'
+		lineageTag: 1c315522-a774-45e5-9643-806a237291f1
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Measure Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Source Table'
+		lineageTag: bb9fd7b4-a6af-4d1e-9ef1-c06b87234ef1
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Source Table]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'DAX Formula'
+		lineageTag: b36f8246-d08a-487b-8f92-7824a48d482b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [DAX Formula]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Format
+		lineageTag: 4f458d7b-66f8-46e9-9071-8d37c45b4f1e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Format]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DAX_Catalog = calculated
+		mode: import
+		source =
+				
+				SELECTCOLUMNS(
+				    INFO.VIEW.MEASURES(),
+				    "Measure Name", [Name],
+				    "Source Table", [Table],
+				    "DAX Formula", [Expression],
+				    "Format", [FormatString]
+				)
+
+	annotation PBI_Id = 1c380555388a4d2097e6cfc20efb2afa
+

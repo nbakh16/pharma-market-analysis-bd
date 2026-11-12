@@ -1,0 +1,225 @@
+table master_medicines_enriched
+	lineageTag: b69aa320-a78d-4e0f-ab47-faa7e8a9e7a4
+
+	measure 'Median Unit Price' =
+			
+			CALCULATE(
+			    MEDIAN('master_medicines_enriched'[price_bdt]),
+			    'master_medicines_enriched'[pricing_basis] = "per_unit"
+			)
+		lineageTag: 258c6bc6-b94b-44d0-857c-2105b609aa7c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Crowded Brands' =
+			
+			DIVIDE(
+			    CALCULATE(
+			        DISTINCTCOUNT('master_medicines_enriched'[brand_id]),
+			        'master_medicines_enriched'[competition_tier] = "4. Crowded (11+ Mfgs)"
+			    ),
+			    DISTINCTCOUNT('master_medicines_enriched'[brand_id]),
+			    0
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: d47af1b3-28b5-4fc9-a7c7-9961b749178b
+
+	measure 'Below Median %' =
+			
+			VAR BelowCount = CALCULATE(DISTINCTCOUNT('master_medicines_enriched'[brand_id]), 'master_medicines_enriched'[pricing_stance] = "Below Median (<0.99x)")
+			VAR ValidCount = CALCULATE(DISTINCTCOUNT('master_medicines_enriched'[brand_id]), 'master_medicines_enriched'[pricing_stance] <> "Not Applicable (Non-Unit / <10 Brands)")
+			RETURN DIVIDE(BelowCount, ValidCount, 0)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 2818bba4-0904-42ff-b40f-5065e63c90ee
+
+	measure 'At Median %' =
+			
+			VAR AtCount = CALCULATE(DISTINCTCOUNT('master_medicines_enriched'[brand_id]), 'master_medicines_enriched'[pricing_stance] = "At Market Median (1.00x)")
+			VAR ValidCount = CALCULATE(DISTINCTCOUNT('master_medicines_enriched'[brand_id]), 'master_medicines_enriched'[pricing_stance] <> "Not Applicable (Non-Unit / <10 Brands)")
+			RETURN DIVIDE(AtCount, ValidCount, 0)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: fe12b9b0-e07a-4736-bd7c-a033b2f9aaf0
+
+	measure 'Above Median %' =
+			
+			VAR AboveCount = CALCULATE(DISTINCTCOUNT('master_medicines_enriched'[brand_id]), 'master_medicines_enriched'[pricing_stance] = "Above Median (>1.01x)")
+			VAR ValidCount = CALCULATE(DISTINCTCOUNT('master_medicines_enriched'[brand_id]), 'master_medicines_enriched'[pricing_stance] <> "Not Applicable (Non-Unit / <10 Brands)")
+			RETURN DIVIDE(AboveCount, ValidCount, 0)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 879524ea-49f2-4c02-840b-61031125494b
+
+	measure '% Monopoly Generics' =
+			
+			DIVIDE(
+			    CALCULATE(
+			        DISTINCTCOUNT('master_medicines_enriched'[generic_id]),
+			        'master_medicines_enriched'[competition_tier] = "1. Monopoly (1 Mfg)"
+			    ),
+			    DISTINCTCOUNT('master_medicines_enriched'[generic_id]),
+			    0
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 239ff6e5-b921-4a5f-ad6a-95292d4b8485
+
+	column brand_id
+		dataType: int64
+		formatString: 0
+		lineageTag: a3a77d2d-c0d2-4341-8f60-0bef0fbb2942
+		summarizeBy: sum
+		sourceColumn: brand_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column brand_name
+		dataType: string
+		lineageTag: 84ce46cf-3a6c-4734-996e-6690a0c3a317
+		summarizeBy: none
+		sourceColumn: brand_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column type
+		dataType: string
+		lineageTag: a707c639-8d75-4693-9b77-f69ab7da713a
+		summarizeBy: none
+		sourceColumn: type
+
+		annotation SummarizationSetBy = Automatic
+
+	column slug
+		dataType: string
+		lineageTag: b9b5e05b-5cf8-4e41-8f92-dc1db33d3230
+		summarizeBy: none
+		sourceColumn: slug
+
+		annotation SummarizationSetBy = Automatic
+
+	column dosage_form
+		dataType: string
+		lineageTag: 15a89d03-6bc7-45d9-8346-774f201bd557
+		summarizeBy: none
+		sourceColumn: dosage_form
+
+		annotation SummarizationSetBy = Automatic
+
+	column generic
+		dataType: string
+		lineageTag: 12cf219c-3934-4b22-98a8-d19b26fc3e22
+		summarizeBy: none
+		sourceColumn: generic
+
+		annotation SummarizationSetBy = Automatic
+
+	column strength
+		dataType: string
+		lineageTag: bb890adf-5e39-41ee-90e6-168e6577ab17
+		summarizeBy: none
+		sourceColumn: strength
+
+		annotation SummarizationSetBy = Automatic
+
+	column manufacturer
+		dataType: string
+		lineageTag: 17f99a43-b136-448d-a68b-7f16b4359b85
+		summarizeBy: none
+		sourceColumn: manufacturer
+
+		annotation SummarizationSetBy = Automatic
+
+	column package_container
+		dataType: string
+		lineageTag: a712582f-de03-481a-b6b8-af58b9500f80
+		summarizeBy: none
+		sourceColumn: package_container
+
+		annotation SummarizationSetBy = Automatic
+
+	column price_bdt
+		dataType: double
+		lineageTag: 15f747ca-b796-4739-be7c-c8e139e16090
+		summarizeBy: sum
+		sourceColumn: price_bdt
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pricing_basis
+		dataType: string
+		lineageTag: 9cc693f3-0dc2-4dcb-a535-9d72a3c2a72c
+		summarizeBy: none
+		sourceColumn: pricing_basis
+
+		annotation SummarizationSetBy = Automatic
+
+	column generic_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 3eb2491b-d076-430e-9ec6-67083b3fbc91
+		summarizeBy: sum
+		sourceColumn: generic_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column drug_class
+		dataType: string
+		lineageTag: 1d99c370-faf8-4575-896f-62d6c6ae5261
+		summarizeBy: none
+		sourceColumn: drug_class
+
+		annotation SummarizationSetBy = Automatic
+
+	column indication
+		dataType: string
+		lineageTag: f141670a-ec49-4907-8337-e1d5909170e1
+		summarizeBy: none
+		sourceColumn: indication
+
+		annotation SummarizationSetBy = Automatic
+
+	column mfg_tier
+		dataType: string
+		lineageTag: ffc9b68e-cdfa-4cd0-b190-381421a5a65f
+		summarizeBy: none
+		sourceColumn: mfg_tier
+
+		annotation SummarizationSetBy = Automatic
+
+	column competition_tier
+		dataType: string
+		lineageTag: d1819f70-2161-42dc-b8a1-721ae6c19d5b
+		summarizeBy: none
+		sourceColumn: competition_tier
+
+		annotation SummarizationSetBy = Automatic
+
+	column pricing_stance
+		dataType: string
+		lineageTag: 6419139e-a8bb-43c5-a581-c663a649f1bc
+		summarizeBy: none
+		sourceColumn: pricing_stance
+
+		annotation SummarizationSetBy = Automatic
+
+	column price_to_median_ratio
+		dataType: double
+		lineageTag: ba5343e8-d409-4044-9ad7-8cdc068d123a
+		summarizeBy: sum
+		sourceColumn: price_to_median_ratio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition master_medicines_enriched = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\Hola\Desktop\master_medicines_enriched.csv"),[Delimiter=",", Columns=18, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"brand_id", Int64.Type}, {"brand_name", type text}, {"type", type text}, {"slug", type text}, {"dosage_form", type text}, {"generic", type text}, {"strength", type text}, {"manufacturer", type text}, {"package_container", type text}, {"price_bdt", type number}, {"pricing_basis", type text}, {"generic_id", Int64.Type}, {"drug_class", type text}, {"indication", type text}, {"mfg_tier", type text}, {"competition_tier", type text}, {"pricing_stance", type text}, {"price_to_median_ratio", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

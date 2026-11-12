@@ -1,0 +1,238 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "ec8c45952643cc255267",
+  "position": {
+    "x": 12.222222222222221,
+    "y": 164.44444444444443,
+    "z": 5000,
+    "height": 300,
+    "width": 764.44444444444446,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "unmanufactured_generics"
+                    }
+                  },
+                  "Property": "generic_name"
+                }
+              },
+              "queryRef": "unmanufactured_generics.generic_name",
+              "nativeQueryRef": "Generic Molecule",
+              "displayName": "Generic Molecule"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "unmanufactured_generics"
+                    }
+                  },
+                  "Property": "drug_class"
+                }
+              },
+              "queryRef": "unmanufactured_generics.drug_class",
+              "nativeQueryRef": "Drug Class",
+              "displayName": "Drug Class"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "unmanufactured_generics"
+                    }
+                  },
+                  "Property": "indication"
+                }
+              },
+              "queryRef": "unmanufactured_generics.indication",
+              "nativeQueryRef": "Primary Clinical Indication",
+              "displayName": "Primary Clinical Indication"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8.5D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8.5D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {}
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "261.73355281326303D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "unmanufactured_generics.generic_name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "240.24992624081602D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "unmanufactured_generics.drug_class"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "218.1176888998001D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "unmanufactured_generics.indication"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'White Space: 50 Unmanufactured Generics'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {}
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'AlternatingRowsNew'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "22c137ffc8779c453c97",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "unmanufactured_generics"
+              }
+            },
+            "Property": "generic_name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0454f5794ad606173a02",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "unmanufactured_generics"
+              }
+            },
+            "Property": "drug_class"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "5b8136887467057ac480",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "unmanufactured_generics"
+              }
+            },
+            "Property": "indication"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}
